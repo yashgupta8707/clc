@@ -229,4 +229,4 @@ const AcademicFaculty = () => {
   );
 };
 
-export default AcademicFaculty;
+export default AcademicFaculty;D

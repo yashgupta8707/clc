@@ -2,12 +2,12 @@ import React from "react";
 
 const Library = () => {
   const images = [
-    "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1592496001020-6a44e7d63e4a?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1581091012184-5c8af709c6cb?auto=format&fit=crop&w=800&q=80",
+    "https://i.ibb.co/m5dZ30Z2/2006.jpg",
+    "https://i.ibb.co/LsyyQ0r/2005.jpg",
+    "https://i.ibb.co/3514Yp8g/2004.jpg",
+    "https://i.ibb.co/wFrrwvWQ/2003.jpg",
+    "https://i.ibb.co/0p7hnBZj/2002.jpg",
+    "https://i.ibb.co/7tjM5J7p/2001.jpg",
   ];
 
   return (
@@ -64,7 +64,9 @@ const Library = () => {
             Facilities & Resources
           </h3>
           <ul className="list-disc ml-5 space-y-2 text-gray-700">
-            <li>Over 10,000 books and legal journals available for reference.</li>
+            <li>
+              Over 10,000 books and legal journals available for reference.
+            </li>
             <li>Dedicated reading zones for students and faculty.</li>
             <li>Access to online databases, case laws, and e-journals.</li>
             <li>Digital catalogue system for quick resource tracking.</li>

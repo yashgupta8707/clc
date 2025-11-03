@@ -382,6 +382,9 @@ const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
               <p className="text-gray-700">
                 Apply now for <strong>LL.B (3 Years)</strong> &amp; <strong>LL.B (Hons)</strong>. Limited seats — proceed to online registration.
               </p>
+              <p className="text-gray-700">
+                Address: City Law College, Sector 9, Jankipuram Vistar, Khargapur Jagir,Lucknow,Uttar Pradesh 226021
+              </p>
               <div className="flex gap-3 pt-2">
                 <a
                   href="https://www.cgclko.com/pages/OnlineRegistration"

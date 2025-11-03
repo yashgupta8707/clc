@@ -88,7 +88,6 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex items-center gap-6">
-              
               <a
                 href="https://www.cgclko.com/pages/OnlineRegistration"
                 target="_blank"
@@ -107,15 +106,23 @@ const Navbar = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             {/* Location */}
-            <div className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-gray-400" size={20} />
+            <a
+              href="https://maps.app.goo.gl/f5Go1CQTocZDmqfAA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-blue-700 transition-colors"
+            >
+              <FaMapMarkerAlt
+                className="text-gray-400 group-hover:text-blue-700"
+                size={20}
+              />
               <div>
-                <div className="text-sm font-semibold text-gray-700">
+                <div className="text-sm font-semibold text-gray-700 group-hover:text-blue-700">
                   OUR LOCATION
                 </div>
                 <div className="text-xs text-gray-500">Jankipuram, Lucknow</div>
               </div>
-            </div>
+            </a>
 
             {/* Logo */}
             <div className="text-center">
