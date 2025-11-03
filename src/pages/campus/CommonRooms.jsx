@@ -2,11 +2,12 @@ import React from "react";
 
 const CommonRooms = () => {
   const boys = [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+"    https://i.ibb.co/LXxCRnJ5/55.jpg",
+"https://i.ibb.co/nsCbw9cF/54.jpg"
   ];
   const girls = [
-    "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80",
+"    https://i.ibb.co/LdWhxbzx/53.jpg",
+"https://i.ibb.co/bgYWRP6X/52.jpg"
   ];
 
   return (

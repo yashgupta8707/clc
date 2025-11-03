@@ -2,10 +2,21 @@ import React from "react";
 
 const LegalAidAndMootCourt = () => {
   const legalAid = [
-    "https://images.unsplash.com/photo-1581092335263-1e7f9dff6a4f?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1516637090014-cb1ab0d08fc7?auto=format&fit=crop&w=800&q=80",
+    "https://i.ibb.co/C5Kx6wgc/50.jpg",
+"https://i.ibb.co/JWzZmYjy/49.jpg"
   ];
-  const mootCourt = Array(8).fill("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80");
+  const mootCourt = [
+"    https://i.ibb.co/xqNMhdMW/13.jpg",
+"https://i.ibb.co/DcN8Fk0/12.jpg",
+"https://i.ibb.co/YBgpwL12/11.jpg",
+"https://i.ibb.co/j96PR4M4/10.jpg",
+"https://i.ibb.co/YB77NS8R/8.jpg",
+"https://i.ibb.co/jkZthTv5/9.jpg",
+"https://i.ibb.co/6MVD0t9/7.jpg",
+"https://i.ibb.co/bRd2P4Zf/77.jpg",
+"https://i.ibb.co/k2v19ZTt/2028.jpg",
+"https://i.ibb.co/kVn5Wp0L/2027.jpg"
+  ]
 
   return (
     <div className="bg-white text-gray-800">

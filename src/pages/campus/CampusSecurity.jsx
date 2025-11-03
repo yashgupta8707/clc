@@ -2,9 +2,11 @@ import React from "react";
 
 const CampusSecurity = () => {
   const images = [
-    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1614728263952-94e8e9536a05?auto=format&fit=crop&w=800&q=80",
+    "https://i.ibb.co/hRTK2tcb/2060.jpg",
+"https://i.ibb.co/yFtP2bZQ/2062.jpg",
+"https://i.ibb.co/WN7Dd1F3/2061.jpg",
+"https://i.ibb.co/8LSMMVhJ/2064.jpg",
+"https://i.ibb.co/bg2HNmGV/2063.jpg"
   ];
 
   return (

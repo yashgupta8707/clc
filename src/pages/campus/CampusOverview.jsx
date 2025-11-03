@@ -2,17 +2,20 @@ import React from "react";
 
 const CampusOverview = () => {
   const campusImages = [
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80",
+"https://i.ibb.co/WWdd1DZ0/236.jpg",
+"https://i.ibb.co/9k1p8Snx/76.jpg",
+"https://i.ibb.co/SDfJmbCF/75.jpg"
   ];
 
   const divyangImages = [
-    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1600607687920-4b1bf1b6b44f?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80",
+        "https://i.ibb.co/HfLyBB80/136.jpg",
+"https://i.ibb.co/Fq7MZyWf/135.jpg",
+"https://i.ibb.co/FL5TKTsK/131.jpg",
+"https://i.ibb.co/BHrRY5hP/130.jpg"
   ];
+
+  const basePath = "/pdfs";
+  const toLink = (file) => `${basePath}/${encodeURIComponent(file)}`;
 
   return (
     <div className="bg-white text-gray-800">
@@ -65,7 +68,7 @@ const CampusOverview = () => {
           </div>
           <div className="mt-6">
             <a
-              href="https://example.com/policy-for-disabled.pdf"
+              href={toLink("policy.pdf")}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-700 hover:underline font-medium"

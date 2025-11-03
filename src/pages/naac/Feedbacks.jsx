@@ -1,20 +1,25 @@
 import React from "react";
 
 const Feedbacks = () => {
+  const basePath = "/pdfs";
+  const toLink = (file) => `${basePath}/${encodeURIComponent(file)}`;
+
+  // Forms & Minutes (local files)
   const feedbackReports = [
-    { name: "Teacher Feedback 2018-23", link: "https://example.com/teacher-feedback.pdf" },
-    { name: "Employer Feedback 2018-23", link: "https://example.com/employer-feedback.pdf" },
-    { name: "Alumni Feedback 2018-23", link: "https://example.com/alumni-feedback.pdf" },
-    { name: "Student Feedback 2018-23", link: "https://example.com/student-feedback.pdf" },
-    { name: "Minutes 2023", link: "https://example.com/minutes-2023.pdf" },
+    { name: "Teacher Feedback 2018-23", file: "TEACHER FEEDBACK FORM.pdf" },
+    { name: "Employer Feedback 2018-23", file: "EMPLOYER FEEDBACK FORM.pdf" },
+    { name: "Alumni Feedback 2018-23", file: "ALUMINI FEEDBACK FORM.pdf" }, // filename as-is
+    { name: "Student Feedback 2018-23", file: "STUDENT FEEDBACK FORM.pdf" },
+    { name: "Minutes 2023", file: "CLC FEEDBACK MINUTES.pdf" },
   ];
 
+  // Reports & ATR (local files)
   const atrReports = [
-    { name: "Teacher Feedback 2018-23", link: "https://example.com/teacher-feedback-atr.pdf" },
-    { name: "Employer Feedback 2018-23", link: "https://example.com/employer-feedback-atr.pdf" },
-    { name: "Alumni Feedback 2018-23", link: "https://example.com/alumni-feedback-atr.pdf" },
-    { name: "Student Feedback 2018-23", link: "https://example.com/student-feedback-atr.pdf" },
-    { name: "Action Taken Report (ATR) 2018-23", link: "https://example.com/action-taken-report.pdf" },
+    { name: "Teacher Feedback 2018-23", file: "TEACHER FEEDBACK report.pdf" },
+    { name: "Employer Feedback 2018-23", file: "Employer Feedback Report.pdf" },
+    { name: "Alumni Feedback 2018-23", file: "ALUMNI FEEDBACK REPORT.pdf" },
+    { name: "Student Feedback 2018-23", file: "Student feedback report 0.pdf" },
+    { name: "Action Taken Report (ATR) 2018-23", file: "CLC ATR.pdf" },
   ];
 
   return (
@@ -43,7 +48,7 @@ const Feedbacks = () => {
             {feedbackReports.map((f, i) => (
               <li key={i}>
                 <a
-                  href={f.link}
+                  href={toLink(f.file)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-700 hover:underline font-medium"
@@ -64,7 +69,7 @@ const Feedbacks = () => {
             {atrReports.map((f, i) => (
               <li key={i}>
                 <a
-                  href={f.link}
+                  href={toLink(f.file)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-700 hover:underline font-medium"
