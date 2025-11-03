@@ -3,20 +3,20 @@ import React from "react";
 const FacilitiesDivyang = () => {
   const facilities = [
     {
-      title: "Built Environment with Ramps/Lifts",
-      img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80",
+      // title: "Built Environment with Ramps/Lifts",
+      img:"https://i.ibb.co/BHrRY5hP/130.jpg",
     },
     {
-      title: "Divyangjan-Friendly Washrooms",
-      img: "https://images.unsplash.com/photo-1600607687920-4b1bf1b6b44f?auto=format&fit=crop&w=800&q=80",
+      // title: "Divyangjan-Friendly Washrooms",
+      img: "https://i.ibb.co/FL5TKTsK/131.jpg",
     },
     {
-      title: "Tactile Paths & Signage",
-      img: "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=800&q=80",
+      // title: "Tactile Paths & Signage",
+      img: "https://i.ibb.co/Fq7MZyWf/135.jpg",
     },
     {
-      title: "Assistive Technology Facilities",
-      img: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80",
+      // title: "Assistive Technology Facilities",
+      img: "https://i.ibb.co/HfLyBB80/136.jpg",
     },
   ];
 
@@ -55,7 +55,7 @@ const FacilitiesDivyang = () => {
 
         <div className="mt-10">
           <a
-            href="https://example.com/divyang-policy.pdf"
+            href="/pdfs/policy.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-700 hover:underline font-medium"

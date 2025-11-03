@@ -577,11 +577,11 @@ const Navbar = () => {
                         Achievements
                       </Link>
                       <Link
-                        to="/students/health-sedg"
+                        to="/students/placement-cell"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 border-b"
                         onClick={() => setOpenDropdown(null)}
                       >
-                        Health & SEDG
+                        Placement Cell
                       </Link>
                       <Link
                         to="/students/equal-opportunity"
@@ -590,20 +590,24 @@ const Navbar = () => {
                       >
                         Equal Opportunity Cell
                       </Link>
-                      <Link
-                        to="/students/model-question-paper"
+                      <a
+                        href="/pdfs/QUESTION PAPER.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 border-b"
                         onClick={() => setOpenDropdown(null)}
                       >
                         Model Question Paper ↗
-                      </Link>
-                      <Link
-                        to="/students/grievance"
+                      </a>
+                      <a
+                        href="/pdfs/GRIVANCE REDRESSAL minutes.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 border-b"
                         onClick={() => setOpenDropdown(null)}
                       >
                         Grievance Redressal Committee ↗
-                      </Link>
+                      </a>
                       <Link
                         to="/students/code-of-conduct"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-b-lg"

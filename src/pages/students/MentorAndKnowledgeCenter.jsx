@@ -2,9 +2,9 @@ import React from "react";
 
 const MentorAndKnowledgeCenter = () => {
   const mentorPDFs = [
-    { name: "Teacher Mentor", link: "https://example.com/teacher-mentor.pdf" },
-    { name: "Student Mentor", link: "https://example.com/student-mentor.pdf" },
-    { name: "Mentor Diary", link: "https://example.com/mentor-diary.pdf" },
+    { name: "Teacher Mentor", link: "/pdfs/MENTOR ALOTMENT CIRCULAR 2022-23.pdf" },
+    { name: "Student Mentor", link: "/pdfs/STUDENT MENTOR CIRCULAR 2022-23.pdf" },
+    { name: "Mentor Diary", link: "/pdfs/MENTOR DIARY.pdf" },
   ];
 
   const eContent = [

@@ -70,6 +70,7 @@ import Library from "./pages/Library";
 import Gallery from "./pages/Gallery";
 import Alumni from "./pages/Allumni";
 import Contact from "./pages/Contact";
+import Placements from "./pages/students/Achievements copy";
 
 // External Redirect Component
 const ExternalRedirect = ({ url }) => {
@@ -252,6 +253,7 @@ function App() {
           />
           <Route path="/students/addon-courses" element={<AddOnCourses />} />
           <Route path="/students/achievements" element={<Achievements />} />
+          <Route path="/students/placement-cell" element={<Placements />} />
           <Route path="/students/health-sedg" element={<HealthAndSEDG />} />
           <Route
             path="/students/equal-opportunity"
