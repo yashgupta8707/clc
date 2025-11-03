@@ -2,15 +2,31 @@ import React from "react";
 
 const StudentList = () => {
   const pdfs = [
-    { name: "List of First Year Students", url: "https://example.com/first-year.pdf" },
-    { name: "List of Final Year Students", url: "https://example.com/final-year.pdf" },
-    { name: "List of Students Enrolled in Add-on Course", url: "https://example.com/addon.pdf" },
-    { name: "List of Reserved Category Students", url: "https://example.com/reserved.pdf" },
-    { name: "Certificates", url: "https://example.com/certificates.pdf" },
+    {
+      name: "CLC FIRST YEAR STUDENT 5 YRS",
+      url: "/pdfs/CLC FIRST YEAR STUDENT 5 YRS.pdf",
+    },
+    {
+      name: "CLC PASSED STUDENT CERTIFICATE UPDATED",
+      url: "/pdfs/CLC PASSED STUDENT CERTIFICATE UPDATED.pdf",
+    },
+    {
+      name: "LIST OF ENROLLED STUDENTS IN 5 YEARS FINAL",
+      url: "/pdfs/LIST OF ENROLLED STUDENTS IN 5 YEARS FINAL.pdf",
+    },
+    {
+      name: "LIST OF RESERVED CATEGORY STUDENTS",
+      url: "/pdfs/LIST OF RESERVED CATEGORY STUDENTS.pdf",
+    },
+    {
+      name: "5 Academic yr Final List",
+      url: "/pdfs/5 Academic yr Final List.pdf",
+    },
   ];
 
   return (
     <div className="bg-white text-gray-800">
+      {/* Header Section */}
       <div
         className="relative h-64 bg-cover bg-center flex items-center justify-center"
         style={{
@@ -24,6 +40,7 @@ const StudentList = () => {
         </h1>
       </div>
 
+      {/* Content */}
       <div className="max-w-5xl mx-auto px-6 py-12">
         <h2 className="text-2xl font-semibold text-blue-800 mb-6">
           Download Student Lists (PDF)
@@ -37,7 +54,7 @@ const StudentList = () => {
                 rel="noopener noreferrer"
                 className="text-blue-700 hover:underline font-medium"
               >
-                {item.name} ↗
+                {item.name} (PDF) ↗
               </a>
             </li>
           ))}

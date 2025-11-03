@@ -2,9 +2,14 @@ import React from "react";
 
 const SportsFacilities = () => {
   const images = [
-    "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1571003123894-1e3b9b4d3436?auto=format&fit=crop&w=800&q=80",
+    "https://i.ibb.co/mVcGghw8/2050.jpg",
+    "https://i.ibb.co/Q3k1GVHJ/2049.jpg",
+    "https://i.ibb.co/0pzQGx8d/2048.jpg",
+    "https://i.ibb.co/bgcMJ42N/115.jpg",
+    "https://i.ibb.co/bgvc0KK3/2046.jpg",
+    "https://i.ibb.co/Vc7YWSwR/2045.jpg",
+    "https://i.ibb.co/yFwvdnkT/2047.jpg",
+    "https://i.ibb.co/tM8CXtT8/116.jpg",
   ];
 
   return (

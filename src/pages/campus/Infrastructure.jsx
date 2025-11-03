@@ -2,24 +2,65 @@ import React from "react";
 
 const Infrastructure = () => {
   const sections = [
-    { title: "Classrooms", count: 8 },
-    { title: "Seminar Hall", count: 4 },
-    { title: "Library", count: 6 },
-    { title: "ICT Lab", count: 4 },
-    { title: "Sports Facilities", count: 6 },
+    {
+      title: "Classrooms",
+      images: [
+        "https://i.ibb.co/Xr1Vtzrb/classroom.png",
+        "https://i.ibb.co/MDVmNpd4/smart-class.png",
+      ],
+    },
+    {
+      title: "Seminar Hall",
+      images: [
+        "https://i.ibb.co/MyPb20xL/71.jpg",
+        "https://i.ibb.co/ccXM6gRw/72.jpg",
+        "https://i.ibb.co/k278Gpgk/68.jpg",
+        "https://i.ibb.co/FLZsR9GR/69.jpg",
+      ],
+    },
+    {
+      title: "Library",
+      images: [
+        "https://i.ibb.co/m5dZ30Z2/2006.jpg",
+        "https://i.ibb.co/LsyyQ0r/2005.jpg",
+        "https://i.ibb.co/3514Yp8g/2004.jpg",
+        "https://i.ibb.co/wFrrwvWQ/2003.jpg",
+        "https://i.ibb.co/0p7hnBZj/2002.jpg",
+        "https://i.ibb.co/7tjM5J7p/2001.jpg",
+      ],
+    },
+    {
+      title: "ICT Lab",
+      images: [
+        "https://i.ibb.co/bg67bKD8/91.jpg",
+        "https://i.ibb.co/WNkvZ2m9/90.jpg",
+        "https://i.ibb.co/KxBf7j8K/89.jpg",
+        "https://i.ibb.co/7JZ3DjHn/88.jpg",
+      ],
+    },
+    {
+      title: "Sports Facilities",
+      images: [
+        "https://i.ibb.co/mVcGghw8/2050.jpg",
+        "https://i.ibb.co/Q3k1GVHJ/2049.jpg",
+        "https://i.ibb.co/0pzQGx8d/2048.jpg",
+        "https://i.ibb.co/bgcMJ42N/115.jpg",
+        "https://i.ibb.co/bgvc0KK3/2046.jpg",
+        "https://i.ibb.co/Vc7YWSwR/2045.jpg",
+        "https://i.ibb.co/yFwvdnkT/2047.jpg",
+        "https://i.ibb.co/tM8CXtT8/116.jpg",
+      ],
+    },
   ];
-
-  const getImages = (count) =>
-    Array(count)
-      .fill("https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80");
 
   return (
     <div className="bg-white text-gray-800">
+      {/* Header Section */}
       <div
         className="relative h-64 bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1600&q=80')",
+            "url('https://i.ibb.co/Xr1Vtzrb/classroom.png')",
         }}
       >
         <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
@@ -28,6 +69,7 @@ const Infrastructure = () => {
         </h1>
       </div>
 
+      {/* Content Sections */}
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
         {sections.map((section, idx) => (
           <section key={idx}>
@@ -35,7 +77,7 @@ const Infrastructure = () => {
               {section.title}
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {getImages(section.count).map((src, i) => (
+              {section.images.map((src, i) => (
                 <img
                   key={i}
                   src={src}
