@@ -19,7 +19,14 @@ const Home = () => {
     email: '',
     phone: '',
     course: '',
-    message: ''
+    message: '',
+    website: '' // honeypot (should stay empty)
+  });
+
+  const [status, setStatus] = useState({
+    loading: false,
+    ok: null,     // true | false | null
+    error: ''
   });
 
   const handleChange = (e) => {
@@ -29,15 +36,49 @@ const Home = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission (hook up to API as needed)
-    console.log(formData);
+    if (formData.website) {
+      // bot filled hidden field; silently succeed
+      setStatus({ loading: false, ok: true, error: '' });
+      return;
+    }
+
+    setStatus({ loading: true, ok: null, error: '' });
+    try {
+      const res = await fetch('/enquiry.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: formData.course,
+          message: formData.message
+        })
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to send enquiry');
+      }
+
+      setStatus({ loading: false, ok: true, error: '' });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        course: '',
+        message: '',
+        website: ''
+      });
+    } catch (err) {
+      setStatus({ loading: false, ok: false, error: err.message || 'Something went wrong' });
+    }
   };
 
   // ====== Hero Carousel ======
   const heroImages = [
-    // dummy, college-relevant images
     "https://i.ibb.co/pjWfSV0D/14.jpg",
     "https://i.ibb.co/NnWHXZtc/11.jpg",
     "https://i.ibb.co/MDyf8Zjb/CLC.png",
@@ -47,27 +88,12 @@ const Home = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000); // 5s per slide
+    }, 5000);
     return () => clearInterval(id);
   }, [heroImages.length]);
 
-  // ====== Admissions Popup (10s after first visit) ======
-//   const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(false);
-
-//   useEffect(() => {
-//     const alreadyShown = sessionStorage.getItem('admissionsModalShown');
-//     if (!alreadyShown) {
-//       const timer = setTimeout(() => {
-//         setShowAdmissionsPopup(true);
-//         sessionStorage.setItem('admissionsModalShown', 'true');
-//       }, 10000); // 10 seconds
-//       return () => clearTimeout(timer);
-//     }
-//   }, []);
-
-// ====== Admissions Popup (open instantly on page load) ======
-const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
-
+  // ====== Admissions Popup (open instantly on page load) ======
+  const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
   const closeAdmissionsPopup = () => setShowAdmissionsPopup(false);
 
   // ====== Demo Data ======
@@ -154,6 +180,17 @@ const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
               <div className="bg-white/95 backdrop-blur rounded-lg shadow-2xl p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Enquire Now</h3>
                 <form onSubmit={handleSubmit}>
+                  {/* Honeypot (hidden) */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+
                   <input
                     type="text"
                     name="name"
@@ -201,12 +238,26 @@ const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
                     rows="3"
                     className="w-full px-4 py-3 mb-4 border border-gray-300 rounded text-gray-800 focus:outline-none focus:border-blue-700"
                   ></textarea>
+
                   <button
                     type="submit"
-                    className="w-full bg-blue-700 text-white py-3 rounded font-semibold hover:bg-blue-800 transition-colors"
+                    disabled={status.loading}
+                    className="w-full bg-blue-700 text-white py-3 rounded font-semibold hover:bg-blue-800 transition-colors disabled:opacity-60"
                   >
-                    SUBMIT ENQUIRY
+                    {status.loading ? 'Sending…' : 'SUBMIT ENQUIRY'}
                   </button>
+
+                  {/* Status messages */}
+                  {status.ok && (
+                    <p className="mt-3 text-sm text-emerald-700">
+                      Thank you! Your enquiry has been sent. We’ll contact you soon.
+                    </p>
+                  )}
+                  {status.ok === false && (
+                    <p className="mt-3 text-sm text-red-600">
+                      Error: {status.error}
+                    </p>
+                  )}
 
                   {/* Quick link to online registration */}
                   <a
@@ -358,76 +409,76 @@ const [showAdmissionsPopup, setShowAdmissionsPopup] = useState(true);
         </div>
       </section>
 
-      /* ====== Admissions Popup Modal ====== */
-{showAdmissionsPopup && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center">
-    {/* Backdrop */}
-    <div
-      className="absolute inset-0 bg-black/60"
-      onClick={closeAdmissionsPopup}
-    />
-    {/* Modal */}
-    <div className="relative bg-white rounded-2xl shadow-2xl w-[92%] max-w-lg p-6 md:p-7 z-10">
-      <button
-        onClick={closeAdmissionsPopup}
-        className="absolute right-3 top-3 text-gray-500 hover:text-gray-800"
-        aria-label="Close popup"
-        title="Close"
-      >
-        <FaTimes size={18} />
-      </button>
-
-      <div className="space-y-3">
-        <h3 className="text-2xl font-semibold text-blue-800">
-          Admissions Open 2025–26
-        </h3>
-
-        <p className="text-gray-700">
-          Apply now for{" "}
-          <strong>LL.B (3 Years)</strong>,{" "}
-          <strong>LL.B (Hons)</strong> &amp;{" "}
-          <strong>LL.M (Post-Graduate)</strong>. Limited seats — proceed to
-          online registration or chat with us on WhatsApp.
-        </p>
-
-        <p className="text-gray-700">
-          Address: City Law College, Sector 9, Jankipuram Vistar, Khargapur
-          Jagir, Lucknow, Uttar Pradesh 226021
-        </p>
-
-        <div className="flex flex-wrap gap-3 pt-2">
-          <a
-            href="https://www.cgclko.com/pages/OnlineRegistration"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-5 py-2 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 transition-colors"
-          >
-            Register Now ↗
-          </a>
-
-          <a
-            href="https://wa.me/918177001081?text=Hello%20City%20Law%20College%2C%20I%27m%20interested%20in%20Admissions%202025%E2%80%9326%20(LL.B%20%7C%20LL.M)."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
-            aria-label="Chat on WhatsApp"
-            title="Chat on WhatsApp"
-          >
-            <FaWhatsapp size={18} />
-            Chat on WhatsApp
-          </a>
-
-          <button
+      {/* ====== Admissions Popup Modal ====== */}
+      {showAdmissionsPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60"
             onClick={closeAdmissionsPopup}
-            className="inline-flex items-center justify-center px-5 py-2 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors"
-          >
-            Not now
-          </button>
+          />
+          {/* Modal */}
+          <div className="relative bg-white rounded-2xl shadow-2xl w-[92%] max-w-lg p-6 md:p-7 z-10">
+            <button
+              onClick={closeAdmissionsPopup}
+              className="absolute right-3 top-3 text-gray-500 hover:text-gray-800"
+              aria-label="Close popup"
+              title="Close"
+            >
+              <FaTimes size={18} />
+            </button>
+
+            <div className="space-y-3">
+              <h3 className="text-2xl font-semibold text-blue-800">
+                Admissions Open 2025–26
+              </h3>
+
+              <p className="text-gray-700">
+                Apply now for{" "}
+                <strong>LL.B (3 Years)</strong>,{" "}
+                <strong>LL.B (Hons)</strong> &amp;{" "}
+                <strong>LL.M (Post-Graduate)</strong>. Limited seats — proceed to
+                online registration or chat with us on WhatsApp.
+              </p>
+
+              <p className="text-gray-700">
+                Address: City Law College, Sector 9, Jankipuram Vistar, Khargapur
+                Jagir, Lucknow, Uttar Pradesh 226021
+              </p>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="https://www.cgclko.com/pages/OnlineRegistration"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-5 py-2 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 transition-colors"
+                >
+                  Register Now ↗
+                </a>
+
+                <a
+                  href="https://wa.me/918177001081?text=Hello%20City%20Law%20College%2C%20I%27m%20interested%20in%20Admissions%202025%E2%80%9326%20(LL.B%20%7C%20LL.M)."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  aria-label="Chat on WhatsApp"
+                  title="Chat on WhatsApp"
+                >
+                  <FaWhatsapp size={18} />
+                  Chat on WhatsApp
+                </a>
+
+                <button
+                  onClick={closeAdmissionsPopup}
+                  className="inline-flex items-center justify-center px-5 py-2 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors"
+                >
+                  Not now
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
     </div>
   );
 };
