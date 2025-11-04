@@ -48,7 +48,7 @@ const NonTeachingStaff = () => {
               </div>
               
               <a 
-                href="/pdfs/non-teaching-staff-list.pdf" 
+                href="/pdfs/LIST OF NON TEACHING & TECHNICAL STAFF.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-lg"

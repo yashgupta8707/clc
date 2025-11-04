@@ -133,7 +133,7 @@ const AntiRaggingCommittee = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <a 
-                  href="/pdfs/ugc-anti-ragging-draft-regulations.pdf" 
+                  href="/pdfs/ugc anti ragging draft regulations.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
@@ -146,7 +146,7 @@ const AntiRaggingCommittee = () => {
                 </a>
 
                 <a 
-                  href="/pdfs/ugc-anti-ragging-regulation-2009-hindi.pdf" 
+                  href="/pdfs/ugc anti ragging regulation 2009 hindi.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
@@ -159,7 +159,7 @@ const AntiRaggingCommittee = () => {
                 </a>
 
                 <a 
-                  href="/pdfs/anti-ragging-committee-minutes.pdf" 
+                  href="/pdfs/Scanned Image.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
@@ -179,7 +179,7 @@ const AntiRaggingCommittee = () => {
               <p className="text-center mb-6 text-lg">In Case Of Any Complaint Please Feel Free to Contact</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <div className="bg-white bg-opacity-20 p-6 rounded-lg text-center">
+                <div className="bg-blue-500 bg-opacity-20 p-6 rounded-lg text-center">
                   <FaPhone className="mx-auto mb-3" size={32} />
                   <p className="text-sm mb-2">Mobile</p>
                   <a href="tel:+918177001081" className="text-xl font-bold hover:text-yellow-300">
@@ -187,7 +187,7 @@ const AntiRaggingCommittee = () => {
                   </a>
                 </div>
                 
-                <div className="bg-white bg-opacity-20 p-6 rounded-lg text-center">
+                <div className="bg-blue-500 bg-opacity-20 p-6 rounded-lg text-center">
                   <FaEnvelope className="mx-auto mb-3" size={32} />
                   <p className="text-sm mb-2">Email</p>
                   <a href="mailto:complain@cgclko.com" className="text-xl font-bold hover:text-yellow-300 break-all">

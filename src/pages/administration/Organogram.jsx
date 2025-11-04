@@ -45,7 +45,7 @@ const Organogram = () => {
               </div>
               
               <a 
-                href="/pdfs/organogram.pdf" 
+                href="/pdfs/Graphic1.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-lg"

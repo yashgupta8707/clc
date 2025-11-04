@@ -31,7 +31,7 @@ const FoundersMessage = () => {
                 <div className="flex-shrink-0">
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg">
                     <img 
-                      src="https://via.placeholder.com/200x200?text=MM+Srivastava" 
+                      src="https://i.ibb.co/5hVyTWXG/founder.jpg" 
                       alt="Mr. M.M. Srivastava" 
                       className="w-full h-full object-cover"
                     />

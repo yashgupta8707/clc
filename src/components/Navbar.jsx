@@ -323,13 +323,6 @@ const Navbar = () => {
                         Anti Ragging Committee
                       </Link>
                       <Link
-                        to="/administration/faculty"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm border-b border-gray-100"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        Faculty
-                      </Link>
-                      <Link
                         to="/administration/non-teaching-staff"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm border-b border-gray-100"
                         onClick={() => setOpenDropdown(null)}
@@ -949,13 +942,6 @@ const Navbar = () => {
                       onClick={toggleMenu}
                     >
                       Anti Ragging Committee
-                    </Link>
-                    <Link
-                      to="/administration/faculty"
-                      className="block text-white py-2 px-8 hover:bg-blue-700 transition-colors text-sm"
-                      onClick={toggleMenu}
-                    >
-                      Faculty
                     </Link>
                     <Link
                       to="/administration/non-teaching-staff"

@@ -4,28 +4,28 @@ import { FaBook, FaDownload, FaImages, FaChevronDown } from 'react-icons/fa';
 const CodeOfConduct = () => {
   const [activeTab, setActiveTab] = useState('conduct');
 
-  const events = [
-    {
-      title: 'Code of Conduct Orientation Program 2024',
-      date: 'August 15, 2024',
-      image: 'https://via.placeholder.com/400x300?text=Orientation+Program+2024'
-    },
-    {
-      title: 'Ethics and Professional Responsibility Workshop',
-      date: 'September 10, 2024',
-      image: 'https://via.placeholder.com/400x300?text=Ethics+Workshop'
-    },
-    {
-      title: 'Student Code of Conduct Awareness Campaign',
-      date: 'July 20, 2024',
-      image: 'https://via.placeholder.com/400x300?text=Awareness+Campaign'
-    },
-    {
-      title: 'Faculty Training on Code of Conduct',
-      date: 'June 5, 2024',
-      image: 'https://via.placeholder.com/400x300?text=Faculty+Training'
-    }
-  ];
+  // const events = [
+  //   {
+  //     title: 'Code of Conduct Orientation Program 2024',
+  //     date: 'August 15, 2024',
+  //     image: 'https://via.placeholder.com/400x300?text=Orientation+Program+2024'
+  //   },
+  //   {
+  //     title: 'Ethics and Professional Responsibility Workshop',
+  //     date: 'September 10, 2024',
+  //     image: 'https://via.placeholder.com/400x300?text=Ethics+Workshop'
+  //   },
+  //   {
+  //     title: 'Student Code of Conduct Awareness Campaign',
+  //     date: 'July 20, 2024',
+  //     image: 'https://via.placeholder.com/400x300?text=Awareness+Campaign'
+  //   },
+  //   {
+  //     title: 'Faculty Training on Code of Conduct',
+  //     date: 'June 5, 2024',
+  //     image: 'https://via.placeholder.com/400x300?text=Faculty+Training'
+  //   }
+  // ];
 
   return (
     <div className="w-full">
@@ -84,7 +84,7 @@ const CodeOfConduct = () => {
                 >
                   Committee Minutes
                 </button>
-                <button
+                {/* <button
                   onClick={() => setActiveTab('events')}
                   className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     activeTab === 'events'
@@ -93,7 +93,7 @@ const CodeOfConduct = () => {
                   }`}
                 >
                   Events & Activities
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -187,7 +187,7 @@ const CodeOfConduct = () => {
 
                     <div className="text-center">
                       <a 
-                        href="/pdfs/code-of-conduct.pdf" 
+                        href="/pdfs/coc.pdf" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
@@ -240,7 +240,7 @@ const CodeOfConduct = () => {
 
                     <div className="text-center">
                       <a 
-                        href="/pdfs/code-of-conduct-minutes.pdf" 
+                        href="/pdfs/Minutes of code.pdf" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
@@ -254,7 +254,7 @@ const CodeOfConduct = () => {
               )}
 
               {/* Events & Activities */}
-              {activeTab === 'events' && (
+              {/* {activeTab === 'events' && (
                 <div className="animate-fadeIn">
                   <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-lg shadow-xl">
                     <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">
@@ -286,7 +286,7 @@ const CodeOfConduct = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

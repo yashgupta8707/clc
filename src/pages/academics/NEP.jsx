@@ -134,7 +134,7 @@ const NEP = () => {
               comprehensive reforms in Indian education system and their implementation at City Law College.
             </p>
             <a
-              href="/pdfs/nep-final-english.pdf"
+              href="/pdfs/NEP_Final_English_0.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white text-blue-800 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg shadow-lg"

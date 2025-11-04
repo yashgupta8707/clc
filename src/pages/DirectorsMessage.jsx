@@ -26,7 +26,7 @@ const DirectorsMessage = () => {
                 <div className="flex-shrink-0">
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg">
                     <img 
-                      src="https://via.placeholder.com/200x200?text=Dr+Aishwarya" 
+                      src="https://i.ibb.co/jq3J6Xm/director.jpg" 
                       alt="Dr. Aishwarya Singh" 
                       className="w-full h-full object-cover"
                     />
@@ -107,7 +107,7 @@ const DirectorsMessage = () => {
                 <div className="flex-shrink-0 md:order-2">
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg">
                     <img 
-                      src="https://via.placeholder.com/200x200?text=Amrit+S" 
+                      src="https://i.ibb.co/n86ggrcx/amrit-sir.jpg" 
                       alt="Amrit Srivastava" 
                       className="w-full h-full object-cover"
                     />

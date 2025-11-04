@@ -3,17 +3,17 @@ import { FaFileDownload, FaClock } from 'react-icons/fa';
 
 const TimeTable = () => {
   const llb5YearTimetables = [
-    { title: 'CLC LLB 5YR 2022-23 Even Semester', file: '/pdfs/clc-llb-5yr-2022-23-even.pdf' },
-    { title: 'CLC LLB 5YR 2022-23 Odd Semester', file: '/pdfs/clc-llb-5yr-2022-23-odd.pdf' }
+    { title: 'CLC LLB 5YR 2022-23 Even Semester', file: '/pdfs/LLB 5 YEAR EVEN SEM JAN 2023.pdf' },
+    { title: 'CLC LLB 5YR 2022-23 Odd Semester', file: '/pdfs/LLB 5 YEAR ODD SEM JULY 2022.pdf' }
   ];
 
   const llb3YearTimetables = [
-    { title: 'CLC LLB 3YR 2022-23 Even Semester', file: '/pdfs/clc-llb-3yr-2022-23-even.pdf' },
-    { title: 'CLC LLB 3YR 2022-23 Odd Semester', file: '/pdfs/clc-llb-3yr-2022-23-odd.pdf' }
+    { title: 'CLC LLB 3YR 2022-23 Even Semester', file: '/pdfs/LLB 3 YEAR EVEN SEM JAN 2023.pdf' },
+    { title: 'CLC LLB 3YR 2022-23 Odd Semester', file: '/pdfs/LLB 3 YEAR ODD SEM JULY 2022.pdf' }
   ];
 
   const currentYearTimetable = [
-    { title: 'Time Table for 3 Year & B.A. LL.B (2023-24)', file: '/pdfs/timetable-3yr-ballb-2023-24.pdf' }
+    { title: 'Time Table for 3 Year & B.A. LL.B (2023-24)', file: '/pdfs/time table for 3 yr and hons.pdf' }
   ];
 
   return (

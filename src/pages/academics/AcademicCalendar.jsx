@@ -5,19 +5,19 @@ const AcademicCalendar = () => {
   const calendarDocuments = [
     {
       title: 'Academic Calendar 2018-2023',
-      file: '/pdfs/academic-calendar-2018-2023.pdf',
+      file: '/pdfs/CLC ACADEMIC CALENDER 2018- 2023.pdf',
       icon: '📅',
       color: 'blue'
     },
     {
       title: 'Academic Planner 2022-23',
-      file: '/pdfs/academic-planner-2022-23.pdf',
+      file: '/pdfs/CLC ACADEMIC PLANNER.pdf',
       icon: '📋',
       color: 'green'
     },
     {
       title: 'Academic Calendar 2024-25',
-      file: '/pdfs/academic-calendar-2024-25.pdf',
+      file: '/pdfs/TIME TABLES 2024-25.xlsx.pdf',
       icon: '🗓️',
       color: 'purple'
     }

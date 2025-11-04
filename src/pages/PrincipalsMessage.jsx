@@ -32,7 +32,7 @@ const PrincipalsMessage = () => {
                 <div className="flex-shrink-0">
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg">
                     <img 
-                      src="https://via.placeholder.com/200x200?text=Dr+Azad" 
+                      src="https://i.ibb.co/Csm0YdWh/principal.jpg" 
                       alt="Dr. Azad Dwivedi" 
                       className="w-full h-full object-cover"
                     />

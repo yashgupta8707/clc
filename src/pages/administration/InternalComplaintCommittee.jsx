@@ -152,7 +152,7 @@ const InternalComplaintCommittee = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a 
-                  href="/pdfs/ugc-regulations-2015-harassment.pdf" 
+                  href="/pdfs/UGC_regulations 2015-harassment.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
@@ -163,7 +163,7 @@ const InternalComplaintCommittee = () => {
                 </a>
 
                 <a 
-                  href="/pdfs/vishaka-guidelines.pdf" 
+                  href="/pdfs/Vishaka Guidelines.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
@@ -174,7 +174,7 @@ const InternalComplaintCommittee = () => {
                 </a>
 
                 <a 
-                  href="/pdfs/sexual-harassment-minutes.pdf" 
+                  href="/pdfs/sexual harashment minutes.pdf" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
