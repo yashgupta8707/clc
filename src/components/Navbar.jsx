@@ -496,13 +496,15 @@ const Navbar = () => {
                       >
                         Fee Refund Policy
                       </Link>
-                      <Link
-                        to="/admissions/prospectus"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm rounded-b-lg"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        Prospectus ↗
-                      </Link>
+                      <a
+                      href="/pdfs/prospectus.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm rounded-b-lg"
+                      onClick={toggleMenu}
+                    >
+                      Prospectus ↗
+                    </a>
                     </div>
                   )}
                 </div>
@@ -590,6 +592,13 @@ const Navbar = () => {
                       >
                         Equal Opportunity Cell
                       </Link>
+                      <Link
+                        to="/students/health-sedg"
+                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 border-b"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        Health Facilities & SEDG
+                      </Link>
                       <a
                         href="/pdfs/QUESTION PAPER.pdf"
                         target="_blank"
@@ -608,13 +617,15 @@ const Navbar = () => {
                       >
                         Grievance Redressal Committee ↗
                       </a>
-                      <Link
-                        to="/students/code-of-conduct"
+                      <a
+                        href="/pdfs/coc.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-b-lg"
-                        onClick={() => setOpenDropdown(null)}
+                        onClick={toggleMenu}
                       >
                         Code of Conduct for Students ↗
-                      </Link>
+                      </a>
                     </div>
                   )}
                 </div>
@@ -1121,13 +1132,15 @@ const Navbar = () => {
                     >
                       Fee Refund Policy
                     </Link>
-                    <Link
-                      to="/admissions/prospectus"
-                      className="block text-white py-2 px-8 hover:bg-blue-700 transition-colors text-sm"
+                    <a
+                      href="/pdfs/prospectus.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm rounded-b-lg"
                       onClick={toggleMenu}
                     >
                       Prospectus ↗
-                    </Link>
+                    </a>
                   </div>
                 )}
               </div>
@@ -1233,13 +1246,15 @@ const Navbar = () => {
                     >
                       Grievance Redressal ↗
                     </Link>
-                    <Link
-                      to="/students/code-of-conduct"
-                      className="block text-white py-2 px-8 hover:bg-blue-700 text-sm"
+                    <a
+                      href="/pdfs/coc.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-b-lg"
                       onClick={toggleMenu}
                     >
-                      Code of Conduct ↗
-                    </Link>
+                      Code of Conduct for Students ↗
+                    </a>
                   </div>
                 )}
               </div>

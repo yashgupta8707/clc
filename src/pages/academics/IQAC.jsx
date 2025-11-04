@@ -129,7 +129,7 @@ const IQAC = () => {
                   activities, and outcomes for the academic year.
                 </p>
                 <a
-                  href="/pdfs/iqac-report.pdf"
+                  href="/pdfs/iqac.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors font-medium shadow-md hover:shadow-lg"
