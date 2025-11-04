@@ -24,9 +24,9 @@ const AcademicFaculty = () => {
           {/* Banner Image */}
           <div className="mb-12 rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=400&fit=crop" 
+              src="https://i.ibb.co/dsQW9VRX/faculty.jpg" 
               alt="Faculty Members"
-              className="w-full h-96 object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-6 text-white">
               <h2 className="text-2xl font-bold mb-2">Dedicated Academic Excellence</h2>
@@ -91,7 +91,7 @@ const AcademicFaculty = () => {
               </p>
               <div className="text-center">
                 <a
-                  href="/pdfs/faculty-list.pdf"
+                  href="/pdfs/CLC TAECHERS LIST 2022-23.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-medium"
@@ -116,7 +116,7 @@ const AcademicFaculty = () => {
               </p>
               <div className="text-center">
                 <a
-                  href="/pdfs/phd-list.pdf"
+                  href="/pdfs/CLC PHD TEACHERS LIST NEW.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition-colors font-medium"

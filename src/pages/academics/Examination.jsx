@@ -5,12 +5,12 @@ const Examination = () => {
   const examDocuments = [
     {
       title: 'Internal Exam 2022-23 Even Semester',
-      file: '/pdfs/internal-exam-2022-23-even.pdf',
+      file: '/pdfs/INTERNAL EXAM 2022-23 EVEN SEM.pdf',
       date: 'June 2023'
     },
     {
       title: 'Internal Exam 2022-23 Odd Semester',
-      file: '/pdfs/internal-exam-2022-23-odd.pdf',
+      file: '/pdfs/INTERNAL EXAM 2022-23 ODD SEM.pdf',
       date: 'December 2022'
     }
   ];
