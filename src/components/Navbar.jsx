@@ -146,7 +146,7 @@ const Navbar = () => {
                 <div className="text-sm font-semibold text-gray-700">
                   CONTACT US
                 </div>
-                <div className="text-xs text-gray-500">Call Us: 8127701081</div>
+                <div className="text-xs text-gray-500">Call Us: 8177001081</div>
               </div>
             </div>
           </div>
