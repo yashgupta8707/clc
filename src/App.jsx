@@ -71,6 +71,8 @@ import Gallery from "./pages/Gallery";
 import Alumni from "./pages/Allumni";
 import Contact from "./pages/Contact";
 import Placements from "./pages/students/Achievements copy";
+import UndergraduateCourses from "./pages/UndergraduateCourses";
+import PostGraduateCourses from "./pages/PostGraduateCourses";
 
 // External Redirect Component
 const ExternalRedirect = ({ url }) => {
@@ -101,6 +103,9 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/courses/undergraduate" element={<UndergraduateCourses />} />
+          <Route path="/courses/postgraduate" element={<PostGraduateCourses />} />
 
           {/* About Us Routes */}
           <Route path="/about/clc" element={<AboutCLC />} />

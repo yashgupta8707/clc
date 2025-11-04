@@ -247,6 +247,35 @@ const Navbar = () => {
                   )}
                 </div>
 
+                {/* COURSES (NEW) */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown("courses")}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button className="text-white px-4 py-4 hover:bg-blue-700 transition-colors text-sm font-medium flex items-center">
+                    COURSES <FaChevronDown className="ml-1" size={12} />
+                  </button>
+                  {openDropdown === "courses" && (
+                    <div className="absolute left-0 top-full w-80 bg-white shadow-xl rounded-b-lg z-50">
+                      <Link
+                        to="/courses/undergraduate"
+                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 border-b"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        Undergraduate Courses (BA LL.B & LL.B)
+                      </Link>
+                      <Link
+                        to="/courses/postgraduate"
+                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-b-lg"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        Post-Graduate Courses (LL.M)
+                      </Link>
+                    </div>
+                  )}
+                </div>  
+
                 {/* Administration Dropdown */}
                 <div
                   className="relative"
@@ -858,6 +887,38 @@ const Navbar = () => {
                       onClick={toggleMenu}
                     >
                       Acts & Regulations
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile COURSES (NEW) */}
+              <div>
+                <button
+                  onClick={() => setOpenMobileDropdown(openMobileDropdown === "courses" ? null : "courses")}
+                  className="w-full text-left text-white py-3 px-4 hover:bg-blue-700 transition-colors text-sm font-medium flex items-center justify-between"
+                >
+                  COURSES
+                  <FaChevronDown
+                    className={`transform transition-transform ${openMobileDropdown === "courses" ? "rotate-180" : ""}`}
+                    size={12}
+                  />
+                </button>
+                {openMobileDropdown === "courses" && (
+                  <div className="bg-blue-900">
+                    <Link
+                      to="/courses/undergraduate"
+                      className="block text-white py-2 px-8 hover:bg-blue-700 text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Undergraduate Courses
+                    </Link>
+                    <Link
+                      to="/courses/postgraduate"
+                      className="block text-white py-2 px-8 hover:bg-blue-700 text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Post-Graduate Courses
                     </Link>
                   </div>
                 )}
