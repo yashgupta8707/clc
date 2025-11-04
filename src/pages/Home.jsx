@@ -38,9 +38,9 @@ const Home = () => {
   // ====== Hero Carousel ======
   const heroImages = [
     // dummy, college-relevant images
-    'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1920&q=80',
+    "https://i.ibb.co/pjWfSV0D/14.jpg",
+"https://i.ibb.co/NnWHXZtc/11.jpg",
+"https://i.ibb.co/MDyf8Zjb/CLC.png",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
