@@ -56,31 +56,25 @@ const Navbar = () => {
               Empowering Future Legal Professionals
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/CityGroupOfColleges/"
                   className="text-gray-500 hover:text-blue-700 transition-colors"
                 >
                   <FaFacebookF size={14} />
                 </a>
                 <a
-                  href="#"
-                  className="text-gray-500 hover:text-blue-700 transition-colors"
-                >
-                  <FaTwitter size={14} />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/cgclucknow/#"
                   className="text-gray-500 hover:text-blue-700 transition-colors"
                 >
                   <FaInstagram size={14} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/city-group-of-college-lucknow/"
                   className="text-gray-500 hover:text-blue-700 transition-colors"
                 >
                   <FaLinkedinIn size={14} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@CityGroupOfColleges"
                   className="text-gray-500 hover:text-blue-700 transition-colors"
                 >
                   <FaYoutube size={14} />

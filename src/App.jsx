@@ -74,6 +74,8 @@ import Placements from "./pages/students/Achievements copy";
 import UndergraduateCourses from "./pages/UndergraduateCourses";
 import PostGraduateCourses from "./pages/PostGraduateCourses";
 
+import WhatsAppWidget from "./components/WhatsAppWidget";
+
 // External Redirect Component
 const ExternalRedirect = ({ url }) => {
   React.useEffect(() => {
@@ -93,6 +95,13 @@ const ExternalRedirect = ({ url }) => {
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Your page content */}
+      <WhatsAppWidget
+        phone="+918177001081"
+        brand="City Law College"
+        greeting="Hi, Need help?"
+        defaultMessage="Hi, I have a question!"
+      />
       <MouseTrail
         strokeColor="#06b6d4" // trail color
         strokeWidth={2} // trail thickness

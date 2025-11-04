@@ -39,8 +39,8 @@ const Home = () => {
   const heroImages = [
     // dummy, college-relevant images
     "https://i.ibb.co/pjWfSV0D/14.jpg",
-"https://i.ibb.co/NnWHXZtc/11.jpg",
-"https://i.ibb.co/MDyf8Zjb/CLC.png",
+    "https://i.ibb.co/NnWHXZtc/11.jpg",
+    "https://i.ibb.co/MDyf8Zjb/CLC.png",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
